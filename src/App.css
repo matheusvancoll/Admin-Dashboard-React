@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+:root {
+  --header-height: 3rem;
+  --side-width-close: 2rem;
+  --side-width-open: 11rem;
+
+  /*===== Colors =====*/
+  --color-dark: #1B1A19;
+  --color-bg: #323130;
+  --color-contrast: #F7894A;
+  --color-text: #FFFFFF;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--color-detail);
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-thumb {
+  background: var(--color-detail);
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-detail);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ===== Estilo Geral ===== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--body-font);
 }
