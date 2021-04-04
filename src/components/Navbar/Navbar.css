@@ -14,8 +14,8 @@
 }
 
 #max-responsive {
-  width: 4rem;
-  left: 15rem;
+  width: calc(100% - 7rem);
+  left: 5rem;
 }
 
 .navbar__toggle {

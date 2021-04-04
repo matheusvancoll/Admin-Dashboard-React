@@ -7,7 +7,7 @@ function Navbar({toggleState, toggleMove}) {
     <nav className="navbar" id={toggleState ? "" : "max-responsive"}>
       <div className="navbar__toggle">
         <i 
-          className={toggleState ? "fa fa-bars" : "fa fa-times"} 
+          className="fa fa-bars" 
           onClick={toggleMove}>
         </i>
       </div>
