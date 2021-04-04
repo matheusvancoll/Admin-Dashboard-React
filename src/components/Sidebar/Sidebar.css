@@ -1,13 +1,18 @@
-#sidebar {
+.sidebar {
   display: flex;
   flex-direction: column;
-  position: fixed;
   width: var(--side-width-close);
+  position: fixed;
   height: 100vh;
   background: var(--color-dark);
   padding: 1.5rem;
   transition: 0.5s;
 }
+
+#min-responsive {
+  width: var(--side-width-close);
+}
+
 
 .sidebar__img {
   display: flex;
@@ -75,11 +80,11 @@
 
 
 @media only screen and (min-width: 768px) {
-  #sidebar {
+  .sidebar {
     width: var(--side-width-open);
   }
 
-  #sidebar:hover {
+  .sidebar:hover {
     width: var(--side-width-open);
   }
 

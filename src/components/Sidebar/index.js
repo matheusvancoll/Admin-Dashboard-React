@@ -1,20 +1,16 @@
 import './Sidebar.css'
 import logo from '../../assets/img/photo.jpeg'
-function Sidebar(SidebarOpen, closeSidebar) {
+
+function Sidebar(toggleState) {
+
   return(
-    <section className={SidebarOpen ? "sidebar-responsive" : ""} id="sidebar">
+    <section className="sidebar" id={toggleState.toggleState ? "" : "min-responsive"}>
       {/* Sidebar TÍTULO */}
       <div className="sidebar__title">
         <div className="sidebar__img">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo"/>
           <h1>Vancoll Studios</h1>
         </div>
-        <i
-          onClick={ closeSidebar }
-          className="fa fa-times"
-          id="sidebar-icon"
-          arial-hidden="true"
-        ></i>
       </div>
 
       {/* Sidebar OPÇÕES */}

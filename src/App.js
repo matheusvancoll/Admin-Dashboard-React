@@ -2,20 +2,18 @@ import {useState} from 'react';
 import './App.css';
 
 import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
 
 function App() {
 
   const [SidebarOpen, setSidebarOpen] = useState(false)
+  function toggleSidebar() { setSidebarOpen(!SidebarOpen) 
+  console.log(SidebarOpen) }
   
-  function openSidebar() { setSidebarOpen(true) }
-  function closeSidebar() { setSidebarOpen(false) }
-
-
   return (
     <div className="container">
-      {/* <Navbar /> */}
-      <Sidebar />
-      {/* teste */}
+      <Navbar toggleState={SidebarOpen} toggleMove={toggleSidebar}/>
+      <Sidebar toggleState={SidebarOpen} toggleMove={toggleSidebar} />
     </div>
   );
 }
