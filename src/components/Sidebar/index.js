@@ -15,7 +15,7 @@ function Sidebar(toggleState) {
 
       {/* Sidebar OPÇÕES */}
       <div className="sidebar__menu">
-        <div className={toggleState.toggleState ? "sidebar__item active" : "sidebar__item responsive"}>
+        <div className={toggleState.toggleState ? "sidebar__item active" : "sidebar__item active responsive"}>
           <a href="#">
             <i className="fa fa-tachometer"></i>
             <span>Dashboard</span>
