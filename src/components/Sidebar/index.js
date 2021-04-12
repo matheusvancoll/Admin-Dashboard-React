@@ -1,10 +1,11 @@
 import './Sidebar.css'
 import logo from '../../assets/img/photo.jpeg'
+import ButtonItem from './Button'
 
-function Sidebar(toggleState) {
+function Sidebar(props) {
 
   return(
-    <section className="sidebar" id={toggleState.toggleState ? "" : "responsive-sidebar"}>
+    <section className="sidebar" id={props.toggleState ? "" : "responsive-sidebar"}>
       {/* Sidebar TÍTULO */}
       <div className="sidebar__title">
         <div className="sidebar__img">
@@ -15,47 +16,19 @@ function Sidebar(toggleState) {
 
       {/* Sidebar OPÇÕES */}
       <div className="sidebar__menu">
-        <div className={toggleState.toggleState ? "sidebar__item active" : "sidebar__item active responsive"}>
-          <a href="#">
-            <i className="fa fa-tachometer"></i>
-            <span>Dashboard</span>
-          </a>
-        </div>
 
-        <div className={toggleState.toggleState ? "sidebar__item" : "sidebar__item responsive"}>
-          <a href="#">
-            <i className="fa fa-barcode"></i>
-            <span>Produtos</span>
-          </a>
-        </div>
+        <ButtonItem btnName="Dashboard" icon="tachometer" active={true} url="#" toggleState={props.toggleState}/>
+        <ButtonItem btnName="Produtos" icon="barcode" active={false} url="#" toggleState={props.toggleState}/>
+        <ButtonItem btnName="Clientes" icon="users" active={false} url="#" toggleState={props.toggleState}/>
+        <ButtonItem btnName="Vendas" icon="calculator" active={false} url="#" toggleState={props.toggleState}/>
+        <ButtonItem btnName="Relatórios" icon="chart-line" active={false} url="#" toggleState={props.toggleState}/>
 
-        <div className={toggleState.toggleState ? "sidebar__item" : "sidebar__item responsive"}>
-          <a href="#">
-            <i className="fa fa-users"></i>
-            <span>Clientes</span>
-          </a>
-        </div>
-
-        <div className={toggleState.toggleState ? "sidebar__item" : "sidebar__item responsive"}>
-          <a href="#">
-            <i className="fa fa-calculator"></i>
-            <span>Vendas</span>
-          </a>
-        </div>
-        <div className={toggleState.toggleState ? "sidebar__item" : "sidebar__item responsive"}>
-          <a href="#">
-            <i className="fa fa-chart-line"></i>
-            <span>Relatórios</span>
-          </a>
-        </div>
-
-        <div className={toggleState.toggleState ? "sidebar__item logout" : "sidebar__item logout responsive"}>
+        <div className={props.toggleState ? "sidebar__item logout" : "sidebar__item logout responsive"}>
           <a href="#">
             <i className="fa fa-power-off"></i>
             <span>Sair</span>
           </a>
         </div>
-  
       </div>
     </section>
   )
