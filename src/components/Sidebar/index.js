@@ -1,3 +1,5 @@
+import React from 'react'
+
 import './Sidebar.css'
 import logo from '../../assets/img/photo.jpeg'
 import ButtonItem from './Button'
@@ -16,12 +18,15 @@ function Sidebar(props) {
 
       {/* Sidebar OPÇÕES */}
       <div className="sidebar__menu">
+        <ButtonItem link="/dashboard" btnName="Dashboard" icon="tachometer" active={true} url="#" toggleState={props.toggleState}/>
 
-        <ButtonItem btnName="Dashboard" icon="tachometer" active={true} url="#" toggleState={props.toggleState}/>
-        <ButtonItem btnName="Produtos" icon="barcode" active={false} url="#" toggleState={props.toggleState}/>
-        <ButtonItem btnName="Clientes" icon="users" active={false} url="#" toggleState={props.toggleState}/>
-        <ButtonItem btnName="Vendas" icon="calculator" active={false} url="#" toggleState={props.toggleState}/>
-        <ButtonItem btnName="Relatórios" icon="chart-line" active={false} url="#" toggleState={props.toggleState}/>
+        <ButtonItem link="/products"btnName="Produtos" icon="barcode" active={false} url="#" toggleState={props.toggleState}/>
+        
+        <ButtonItem link="/clients" btnName="Clientes" icon="users" active={false} url="#" toggleState={props.toggleState}/>
+
+        <ButtonItem link="sales" btnName="Vendas" icon="calculator" active={false} url="#" toggleState={props.toggleState}/>
+        
+        <ButtonItem link="charts" btnName="Relatórios" icon="chart-line" active={false} url="#" toggleState={props.toggleState}/>
 
         <div className={props.toggleState ? "sidebar__item logout" : "sidebar__item logout responsive"}>
           <a href="#">
