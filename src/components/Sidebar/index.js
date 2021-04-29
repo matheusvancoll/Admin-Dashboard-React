@@ -8,7 +8,7 @@ function Sidebar(props) {
 
   return(
     <section className="sidebar" id={props.toggleState ? "" : "responsive-sidebar"}>
-      {/* Sidebar TÍTULO */}
+
       <div className="sidebar__title">
         <div className="sidebar__img">
           <img src={logo} alt="logo"/>
@@ -16,7 +16,6 @@ function Sidebar(props) {
         </div>
       </div>
 
-      {/* Sidebar OPÇÕES */}
       <div className="sidebar__menu">
         <ButtonItem link="/dashboard" btnName="Dashboard" icon="tachometer" active={true} url="#" toggleState={props.toggleState}/>
 
@@ -29,10 +28,8 @@ function Sidebar(props) {
         <ButtonItem link="charts" btnName="Relatórios" icon="chart-line" active={false} url="#" toggleState={props.toggleState}/>
 
         <div className={props.toggleState ? "sidebar__item logout" : "sidebar__item logout responsive"}>
-          <a href="#">
-            <i className="fa fa-power-off"></i>
-            <span>Sair</span>
-          </a>
+          <i className="fa fa-power-off"></i>
+          <span>Sair</span>
         </div>
       </div>
     </section>
