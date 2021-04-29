@@ -12,9 +12,7 @@ function Navbar({toggleState, toggleMove}) {
         </i>
       </div>
       <div className="navbar__icons">
-        <a>
           <i className="fa fa-cog"></i>
-        </a>
       </div>
     </nav>
   )
